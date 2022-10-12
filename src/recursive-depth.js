@@ -25,15 +25,6 @@ class DepthCalculator {
       return maxDepth+1;
     }
     else return 0;
-
-    /*return a.reduce(function count(cnt, el) {
-      //cnt++;
-      if (Array.isArray(el)) {
-        cnt ++; //el.reduce(count, 0);
-      }
-      return cnt;
-    }, 1);*/
-
     return maxDepth;
   }
 }
