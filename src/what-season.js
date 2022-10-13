@@ -15,7 +15,9 @@ function getSeason(date) {
   //throw new NotImplementedError('Not implemented');
   if (typeof date == 'undefined') { return 'Unable to determine the time of year!'; }
   if (isNaN(Date.parse(date))) { throw Error('Invalid date!'); }
-  //if (typeof(date) != 'object') { throw Error('Invalid date!'); }
+
+  if (Object.getOwnPropertyNames(date).length > 0) { throw Error('Invalid date!'); }
+
   let month = date.getMonth();
   if (isNaN(month)) { throw Error('Invalid date!'); }
   if (month >= 0 && month <= 1 || month === 11) { return 'winter'; }
